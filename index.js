@@ -19,4 +19,12 @@ const analyzeArray = (arr) => { //ANALYZE ARRAY
 
 }
 
-export { capitalize, reverseString, calculator, analyzeArray }
+const fetchPromise = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('peanut butter')
+        }, 1000)
+
+    })
+}
+export { capitalize, reverseString, calculator, analyzeArray, fetchPromise }

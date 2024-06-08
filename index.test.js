@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator, analyzeArray } from "./index.js";
+import { capitalize, reverseString, calculator, analyzeArray, fetchPromise } from "./index.js";
 
 //TEST CAPITALIZE FUNCTION
 it('Capitalized => hello - Hello', () => {
@@ -39,4 +39,18 @@ it('Analyze => array [1,8,3,4,2,6] - { average: 4, min: 1, max: 8, length: 6}', 
     );
 })
 
+//TEST A PROMISE FUNCTION
+it('Test promise', () => {
+    expect(fetchPromise()).resolves.toBe('peanut butter');
+})
 
+// it('Test promise', () => {
+//     expect(fetchPromise()).rejects.toThrow('error');
+// })
+
+
+//TEST WITH ASYNC AWAIT
+it('Test await', async () => {
+    const data = await fetchPromise();
+    expect(data).toBe('peanut butter');
+})
